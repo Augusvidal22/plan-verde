@@ -210,3 +210,39 @@ Fotos con licencia libre bajadas automáticamente de Wikimedia Commons. Uso pers
 - Autor: Ben Schumin from Montgomery Village, Maryland, USA
 - Licencia: CC BY-SA 2.0
 - Fuente: https://commons.wikimedia.org/wiki/File%3ADogs%20in%20Lake%20Michigan%20-01-%20(10150619546).jpg
+
+### perro-7.jpg
+- Título: File:Border collie jumping up to catch frisbee.jpg
+- Autor: p
+- Licencia: Public domain
+- Fuente: https://commons.wikimedia.org/wiki/File%3ABorder%20collie%20jumping%20up%20to%20catch%20frisbee.jpg
+
+### perro-8.jpg
+- Título: File:Russel terrier frisbee 8307v.jpg
+- Autor: Hynek Moravec
+- Licencia: CC BY 3.0
+- Fuente: https://commons.wikimedia.org/wiki/File%3ARussel%20terrier%20frisbee%208307v.jpg
+
+### perro-9.jpg
+- Título: File:Lagotto Romagnolo dog playing in snow while licking its nose during a winter day outdoors.jpg
+- Autor: Shixart1985
+- Licencia: CC BY 2.0
+- Fuente: https://commons.wikimedia.org/wiki/File%3ALagotto%20Romagnolo%20dog%20playing%20in%20snow%20while%20licking%20its%20nose%20during%20a%20winter%20day%20outdoors.jpg
+
+### perro-10.jpg
+- Título: File:My puppy sleeping.jpg
+- Autor: Doglover41
+- Licencia: CC BY-SA 4.0
+- Fuente: https://commons.wikimedia.org/wiki/File%3AMy%20puppy%20sleeping.jpg
+
+### perro-11.jpg
+- Título: File:My little white dog Bella playing in the snow.jpg
+- Autor: Dreamy Pixel
+- Licencia: CC BY 4.0
+- Fuente: https://commons.wikimedia.org/wiki/File%3AMy%20little%20white%20dog%20Bella%20playing%20in%20the%20snow.jpg
+
+### perro-12.jpg
+- Título: File:Bright Eyed Husky.jpg
+- Autor: Craig Chew-Moulding
+- Licencia: CC BY-SA 2.0
+- Fuente: https://commons.wikimedia.org/wiki/File%3ABright%20Eyed%20Husky.jpg

@@ -20,5 +20,5 @@ export interface Plan {
 
 export interface RespuestasQuiz {
   momento: "dia" | "noche" | "sorprender" | null;
-  ambiente: "aire libre" | "bajo techo" | null;
+  ambiente: "aire libre" | "bajo techo" | "sorprender" | null;
 }

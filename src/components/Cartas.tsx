@@ -114,15 +114,12 @@ export default function Cartas({ planes, onVerSorpresa, onVolver }: CartasProps)
       {fase === "eligiendo" && <CorazonesFlotantes />}
 
       {fase !== "revelado" && (
-        <motion.button
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          whileTap={{ scale: 0.95 }}
+        <button
           onClick={onVolver}
-          className="fixed right-4 top-4 z-20 rounded-full border-2 border-negro bg-crema/90 px-4 py-2 font-sans text-sm font-semibold text-negro shadow-carta backdrop-blur transition-colors hover:bg-negro hover:text-crema md:right-6 md:top-6"
+          className="fixed right-4 top-4 z-20 font-sans text-sm font-semibold text-negro/50 transition-colors hover:text-negro md:right-6 md:top-6"
         >
-          ← volver
-        </motion.button>
+          volver
+        </button>
       )}
 
       <div className="my-auto flex w-full flex-col items-center">

@@ -54,7 +54,8 @@ export default function Home() {
     const filtrados = planes.filter((p) => {
       const matchMomento =
         momento === "sorprender" || p.momento === "cualquiera" || p.momento === momento;
-      return matchMomento && p.ambiente === ambiente;
+      const matchAmbiente = ambiente === "sorprender" || p.ambiente === ambiente;
+      return matchMomento && matchAmbiente;
     });
     // Si el filtro no matchea ningún plan, mostramos todos para que la
     // experiencia nunca se quede sin cartas para barajar.

@@ -32,7 +32,11 @@ type OpcionMomento = {
   label: string;
   emoji: string;
 };
-type OpcionAmbiente = { value: "aire libre" | "bajo techo"; label: string; emoji: string };
+type OpcionAmbiente = {
+  value: "aire libre" | "bajo techo" | "sorprender";
+  label: string;
+  emoji: string;
+};
 
 const preguntaMomento = {
   texto: "¿De día, de noche, o te sorprendo?",
@@ -48,6 +52,7 @@ const preguntaAmbiente = {
   opciones: [
     { value: "aire libre", label: "Aire libre", emoji: "🌳" },
     { value: "bajo techo", label: "Bajo techo", emoji: "🏠" },
+    { value: "sorprender", label: "Sorprendeme", emoji: "🎲" },
   ] as OpcionAmbiente[],
 };
 
@@ -72,7 +77,7 @@ export default function Quiz({ onCompletar }: QuizProps) {
     setPaso(1);
   }
 
-  function elegirAmbiente(valor: "aire libre" | "bajo techo") {
+  function elegirAmbiente(valor: "aire libre" | "bajo techo" | "sorprender") {
     const nuevas = { ...respuestas, ambiente: valor };
     setRespuestas(nuevas);
     onCompletar(nuevas);
@@ -102,11 +107,11 @@ export default function Quiz({ onCompletar }: QuizProps) {
           transition={{ duration: 0.35 }}
           className="flex w-full max-w-lg flex-1 flex-col items-center justify-center text-center"
         >
-          <h2 className="mb-10 font-poppins text-2xl font-semibold text-negro md:text-3xl">
+          <h2 className="mb-6 font-poppins text-2xl font-semibold text-negro md:mb-10 md:text-3xl">
             {pregunta.texto}
           </h2>
 
-          <div className="flex w-full flex-col gap-4 sm:flex-row sm:justify-center">
+          <div className="flex w-full flex-col gap-3 sm:flex-row sm:justify-center">
             {paso === 0
               ? preguntaMomento.opciones.map((op) => (
                   <motion.button
@@ -114,10 +119,10 @@ export default function Quiz({ onCompletar }: QuizProps) {
                     whileTap={{ scale: 0.95 }}
                     whileHover={{ scale: 1.03 }}
                     onClick={() => elegirMomento(op.value)}
-                    className="flex flex-1 flex-col items-center gap-2 rounded-3xl border-2 border-verde-pastel bg-white px-6 py-8 shadow-carta transition-colors hover:bg-verde-pastel-light"
+                    className="flex flex-1 flex-col items-center gap-1.5 rounded-3xl border-2 border-verde-pastel bg-white px-4 py-5 shadow-carta transition-colors hover:bg-verde-pastel-light md:gap-2 md:px-6 md:py-8"
                   >
-                    <span className="text-4xl">{op.emoji}</span>
-                    <span className="font-sans text-lg font-semibold text-negro">
+                    <span className="text-3xl md:text-4xl">{op.emoji}</span>
+                    <span className="font-sans text-base font-semibold text-negro md:text-lg">
                       {op.label}
                     </span>
                   </motion.button>
@@ -128,10 +133,10 @@ export default function Quiz({ onCompletar }: QuizProps) {
                     whileTap={{ scale: 0.95 }}
                     whileHover={{ scale: 1.03 }}
                     onClick={() => elegirAmbiente(op.value)}
-                    className="flex flex-1 flex-col items-center gap-2 rounded-3xl border-2 border-verde-pastel bg-white px-6 py-8 shadow-carta transition-colors hover:bg-verde-pastel-light"
+                    className="flex flex-1 flex-col items-center gap-1.5 rounded-3xl border-2 border-verde-pastel bg-white px-4 py-5 shadow-carta transition-colors hover:bg-verde-pastel-light md:gap-2 md:px-6 md:py-8"
                   >
-                    <span className="text-4xl">{op.emoji}</span>
-                    <span className="font-sans text-lg font-semibold text-negro">
+                    <span className="text-3xl md:text-4xl">{op.emoji}</span>
+                    <span className="font-sans text-base font-semibold text-negro md:text-lg">
                       {op.label}
                     </span>
                   </motion.button>
@@ -149,7 +154,7 @@ export default function Quiz({ onCompletar }: QuizProps) {
         </motion.div>
       </AnimatePresence>
 
-      <div className="flex w-full justify-center px-6 pb-2 pt-6">
+      <div className="flex h-24 w-full items-center justify-center px-6 pt-4 md:h-28">
         <AnimatePresence mode="wait">
           <motion.p
             key={fraseIndex}

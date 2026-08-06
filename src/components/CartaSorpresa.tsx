@@ -19,6 +19,12 @@ const fotosSorpresa = [
   "/images/perro-4.jpg",
   "/images/perro-5.jpg",
   "/images/perro-6.jpg",
+  "/images/perro-7.jpg",
+  "/images/perro-8.jpg",
+  "/images/perro-9.jpg",
+  "/images/perro-10.jpg",
+  "/images/perro-11.jpg",
+  "/images/perro-12.jpg",
 ];
 
 const mensajesSorpresa = [
@@ -40,6 +46,16 @@ const mensajesSorpresa = [
   "Cambié de dieta, no de rumbo: sigo yendo derecho hacia más momentos como este con vos.",
   "Me gusta la idea de ir coleccionando lugares nuevos, comidas raras y fotos torpes con vos.",
   "La vida se siente más liviana cuando la pienso en versión 'con vos', sea un viaje, una cena nueva o un martes cualquiera.",
+  "Si en algún momento te aburrís de elegir planes, avisame — igual ya gané con solo estar acá con vos.",
+  "Sofff, cada vez que sonreís se me olvida lo que estaba por decir.",
+  "No hay app que reemplace las ganas que tengo de verte, pero bueno, esta ayuda un poco.",
+  "Capaz algún día tengamos un perro que se parezca a alguno de estos de las fotos. Ya le voy poniendo nombres en la cabeza.",
+  "Me gusta que todavía nos estemos descubriendo — hay algo lindo en no tener apuro.",
+  "Si alguna vez dudás de un plan, elegí el que tenga foto de perro. Nunca falla.",
+  "Prometo aprenderme tu orden de café de memoria, tarde o temprano.",
+  "Hay días que simplemente pienso: qué lindo que es esto que estamos armando.",
+  "No sé si es la app o sos vos, pero algo me hace sonreír solo de pensarlo.",
+  "Ya perdí la cuenta de cuántas veces revisé el celular esperando que me escribas.",
 ];
 
 export default function CartaSorpresa({ onVolver }: CartaSorpresaProps) {
