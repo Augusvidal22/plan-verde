@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import confetti from "canvas-confetti";
 import { Plan } from "@/types/plan";
@@ -10,7 +9,6 @@ import FotoPlan from "./FotoPlan";
 interface CartasProps {
   planes: Plan[];
   onVerSorpresa: () => void;
-  onVolver: () => void;
 }
 
 type Fase = "barajando" | "eligiendo" | "revelado";
@@ -86,15 +84,10 @@ function lanzarConfetti() {
   }, 200);
 }
 
-export default function Cartas({ planes, onVerSorpresa, onVolver }: CartasProps) {
+export default function Cartas({ planes, onVerSorpresa }: CartasProps) {
   const [fase, setFase] = useState<Fase>("barajando");
   const [mazo, setMazo] = useState<Plan[]>(() => mezclar(planes).slice(0, 8));
   const [elegidaId, setElegidaId] = useState<string | null>(null);
-  const [montado, setMontado] = useState(false);
-
-  useEffect(() => {
-    setMontado(true);
-  }, []);
 
   useEffect(() => {
     const t = setTimeout(() => setFase("eligiendo"), 1300);
@@ -129,18 +122,6 @@ export default function Cartas({ planes, onVerSorpresa, onVolver }: CartasProps)
   return (
     <div className="relative flex min-h-dvh flex-col items-center bg-crema px-4 py-10 md:px-8">
       {fase === "eligiendo" && <CorazonesFlotantes />}
-
-      {fase !== "revelado" &&
-        montado &&
-        createPortal(
-          <button
-            onClick={onVolver}
-            className="fixed right-4 top-4 z-20 font-sans text-sm font-semibold text-negro/50 transition-colors hover:text-negro md:right-6 md:top-6"
-          >
-            ← volver
-          </button>,
-          document.body
-        )}
 
       <div className="my-auto flex w-full flex-col items-center">
         {fase !== "revelado" && (

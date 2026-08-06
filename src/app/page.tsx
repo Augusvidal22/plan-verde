@@ -63,7 +63,17 @@ export default function Home() {
   }, [estado.respuestas]);
 
   return (
-    <AnimatePresence mode="wait">
+    <>
+      {estado.pantalla === "cartas" && (
+        <button
+          onClick={() => dispatch({ type: "VOLVER_AL_QUIZ" })}
+          className="fixed right-4 top-4 z-50 font-sans text-sm font-semibold text-negro/50 transition-colors hover:text-negro md:right-6 md:top-6"
+        >
+          ← volver
+        </button>
+      )}
+
+      <AnimatePresence mode="wait">
       {estado.pantalla === "bienvenida" && (
         <motion.div
           key="bienvenida"
@@ -89,7 +99,6 @@ export default function Home() {
           <Cartas
             planes={planesFiltrados}
             onVerSorpresa={() => dispatch({ type: "VER_SORPRESA" })}
-            onVolver={() => dispatch({ type: "VOLVER_AL_QUIZ" })}
           />
         </motion.div>
       )}
@@ -99,6 +108,7 @@ export default function Home() {
           <CartaSorpresa onVolver={() => dispatch({ type: "VOLVER_A_CARTAS" })} />
         </motion.div>
       )}
-    </AnimatePresence>
+      </AnimatePresence>
+    </>
   );
 }

@@ -20,9 +20,26 @@ const caveat = Caveat({
   variable: "--font-caveat",
 });
 
+const titulo = "Plan Verde 🌿";
+const descripcion = "Elegí una carta y descubrí nuestro próximo plan juntos ✨";
+
 export const metadata: Metadata = {
-  title: "Plan Verde 🌿",
-  description: "Un plan al azar para vos, sofff.",
+  metadataBase: new URL(
+    process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000"
+  ),
+  title: titulo,
+  description: descripcion,
+  openGraph: {
+    title: titulo,
+    description: descripcion,
+    type: "website",
+    locale: "es_AR",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: titulo,
+    description: descripcion,
+  },
 };
 
 export default function RootLayout({
