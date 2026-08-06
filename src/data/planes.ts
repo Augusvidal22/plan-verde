@@ -11,7 +11,7 @@ export const planes: Plan[] = [
     foto: "/images/tigre.jpg",
     emojiFallback: "🚤",
     frase:
-      "Un paseo por el río, el Puerto de Frutos y vos con cara de que todo te sorprende. Me gusta esa cara, sofff.",
+      "Un paseo por el río, el Puerto de Frutos y vos con cara de que todo te sorprende. Me gusta esa cara, sofff — y quiero verla muchas veces más.",
     direccionOMapa: "https://maps.google.com/?q=Tigre+Buenos+Aires",
     requisitos: ["protector solar", "gorra", "ganas de caminar", "cámara para las fotos"],
   },
@@ -25,7 +25,7 @@ export const planes: Plan[] = [
     foto: "/images/carlos-keen.jpg",
     emojiFallback: "🧺",
     frase:
-      "Día de campo, mates de por medio y vos tirada al sol sin apuro. Así de simple, así de lindo.",
+      "Día de campo, mates de por medio y vos tirada al sol sin apuro. Así de simple, así de lindo — y así de nosotros.",
     direccionOMapa: "https://maps.google.com/?q=Carlos+Keen+Buenos+Aires",
     requisitos: ["mates", "manta", "agua", "pepitos"],
   },
@@ -39,9 +39,9 @@ export const planes: Plan[] = [
     foto: "/images/cine.jpg",
     emojiFallback: "🎬",
     frase:
-      "Pantalla grande, luces apagadas y tu mano buscando el humus antes que las mías. Trato hecho.",
+      "Pantalla grande, luces apagadas y tu mano buscando el humus antes que las mías. Trato hecho — y prometo no acaparar el pochoclo.",
     direccionOMapa: "El cine más cercano — elegimos juntos la función 🎬",
-    requisitos: ["humus para picar", "algo dulce"],
+    requisitos: ["humus para picar", "algo dulce", "un hombro para apoyar la cabeza"],
   },
   {
     id: "parque-de-la-costa",
@@ -53,7 +53,7 @@ export const planes: Plan[] = [
     foto: "/images/parque-de-la-costa.jpg",
     emojiFallback: "🎢",
     frase:
-      "Gritar en una montaña rusa agarrados de la mano cuenta como plan romántico, ¿no?",
+      "Gritar en una montaña rusa agarrados de la mano cuenta como plan romántico, ¿no? Yo creo que sí.",
     direccionOMapa: "https://maps.google.com/?q=Parque+de+la+Costa",
     requisitos: ["plata para los juegos", "zapatillas cómodas", "ganas de gritar fuerte"],
   },
@@ -82,7 +82,8 @@ export const planes: Plan[] = [
     vegetarianoFriendly: true,
     foto: "/images/pelicula-en-casa.jpg",
     emojiFallback: "🎬",
-    frase: "Sofá, manta, vos y una peli que seguro no vamos a terminar de ver.",
+    frase:
+      "Sofá, manta, vos y una peli que seguro no vamos a terminar de ver porque nos vamos a quedar hablando de cualquier cosa.",
     direccionOMapa: "no tiene dirección fija",
     requisitos: ["pochoclos", "humus para picar", "manta", "elegir la peli entre las dos"],
   },
@@ -95,7 +96,8 @@ export const planes: Plan[] = [
     vegetarianoFriendly: true,
     foto: "/images/curry-garbanzos.jpg",
     emojiFallback: "🍛",
-    frase: "Garbanzos, humus de fondo y las dos manos ocupadas cocinando con vos.",
+    frase:
+      "Garbanzos, humus de fondo y las dos manos ocupadas cocinando con vos — lo que salga, seguro sale rico si lo hacemos juntos.",
     direccionOMapa: "no tiene dirección fija",
     requisitos: ["garbanzos", "leche de coco", "verduras", "ganas de ensuciar la cocina"],
   },
@@ -110,9 +112,9 @@ export const planes: Plan[] = [
     vegetarianoFriendly: true,
     foto: "/images/floreria-atlantico.jpg",
     emojiFallback: "🍸",
-    frase: "Entramos por una florería y salimos con un secreto compartido.",
+    frase: "Entramos por una florería y salimos con un secreto compartido — y con ganas de volver.",
     direccionOMapa: "https://maps.google.com/?q=Floreria+Atlantico+Buenos+Aires",
-    requisitos: ["reserva previa", "ganas de un trago raro"],
+    requisitos: ["reserva previa", "ganas de un trago raro", "curiosidad por lo escondido"],
   },
   {
     id: "restaurante-artemisia",
@@ -123,9 +125,10 @@ export const planes: Plan[] = [
     vegetarianoFriendly: true,
     foto: "/images/artemisia.jpg",
     emojiFallback: "🥗",
-    frase: "Un lugar donde no vas a tener que aclarar 'sin carne, por favor'.",
+    frase:
+      "Un lugar donde no vas a tener que aclarar 'sin carne, por favor' — acá ya lo tienen resuelto.",
     direccionOMapa: "https://maps.google.com/?q=Artemisia+Palermo+Buenos+Aires",
-    requisitos: ["reserva previa"],
+    requisitos: ["reserva previa", "hambre", "ganas de probar algo nuevo"],
   },
   {
     id: "jazz-en-vivo",
@@ -136,9 +139,9 @@ export const planes: Plan[] = [
     vegetarianoFriendly: true,
     foto: "/images/jazz.jpg",
     emojiFallback: "🎷",
-    frase: "Música despacito y vos cerca.",
+    frase: "Música despacito, luces bajas y vos cerca — no hace falta mucho más plan que ese.",
     direccionOMapa: "https://maps.google.com/?q=Thelonious+Bar+Buenos+Aires",
-    requisitos: ["reserva de mesa"],
+    requisitos: ["reserva de mesa", "ganas de bailar despacito", "una copa para acompañar"],
   },
 
   // ---------- PASEOS CORTOS EN LA CIUDAD (medio día) ----------
@@ -151,9 +154,10 @@ export const planes: Plan[] = [
     vegetarianoFriendly: true,
     foto: "/images/feria-san-telmo.jpg",
     emojiFallback: "🎪",
-    frase: "Antigüedades, tango callejero y vos mirando todo con cara de nena.",
+    frase:
+      "Antigüedades, tango callejero y vos mirando todo con cara de nena — me gusta ser tu excusa para pasear sin apuro.",
     direccionOMapa: "https://maps.google.com/?q=Feria+de+San+Telmo",
-    requisitos: ["efectivo", "ganas de caminar"],
+    requisitos: ["efectivo", "ganas de caminar", "hambre para parar en el camino"],
   },
   {
     id: "lagos-palermo",
@@ -164,7 +168,7 @@ export const planes: Plan[] = [
     vegetarianoFriendly: true,
     foto: "/images/lagos-palermo.jpg",
     emojiFallback: "☀️",
-    frase: "Sol, pasto y nada que hacer más que estar bien.",
+    frase: "Sol, pasto y nada que hacer más que estar bien, juntos.",
     direccionOMapa: "https://maps.google.com/?q=Los+Lagos+de+Palermo",
     requisitos: ["manta", "protector solar", "algo para picar"],
   },
@@ -192,9 +196,9 @@ export const planes: Plan[] = [
     vegetarianoFriendly: true,
     foto: "/images/tigre-lancha.jpg",
     emojiFallback: "🚤",
-    frase: "El río, el viento en la cara y vos al lado mío.",
+    frase: "El río, el viento en la cara y vos al lado mío — no necesito mirar mucho más para estar contento.",
     direccionOMapa: "https://maps.google.com/?q=Puerto+de+Frutos+Tigre",
-    requisitos: ["campera liviana", "celu cargado para fotos"],
+    requisitos: ["campera liviana", "celu cargado para fotos", "ganas de subirte a una lancha"],
   },
   {
     id: "isla-tigre",
@@ -218,9 +222,10 @@ export const planes: Plan[] = [
     vegetarianoFriendly: true,
     foto: "/images/areco.jpg",
     emojiFallback: "🐎",
-    frase: "Un pueblo de otra época, para caminar de la mano sin apuro.",
+    frase:
+      "Un pueblo de otra época, para caminar de la mano sin apuro y perdernos un rato del resto del mundo.",
     direccionOMapa: "https://maps.google.com/?q=San+Antonio+de+Areco",
-    requisitos: ["efectivo para artesanías", "ganas de caminar"],
+    requisitos: ["efectivo para artesanías", "ganas de caminar", "hambre para probar algo típico"],
   },
   {
     id: "la-plata",
@@ -231,9 +236,10 @@ export const planes: Plan[] = [
     vegetarianoFriendly: true,
     foto: "/images/la-plata.jpg",
     emojiFallback: "🏛️",
-    frase: "Catedral, museo y un paseo con vos por las diagonales.",
+    frase:
+      "Catedral, museo y un paseo con vos por las diagonales — de esos días que no necesitan nada más para ser lindos.",
     direccionOMapa: "https://maps.google.com/?q=La+Plata+Buenos+Aires",
-    requisitos: ["ganas de caminar", "efectivo para el museo"],
+    requisitos: ["ganas de caminar", "efectivo para el museo", "curiosidad"],
   },
   {
     id: "lujan",
@@ -244,9 +250,14 @@ export const planes: Plan[] = [
     vegetarianoFriendly: true,
     foto: "/images/lujan.jpg",
     emojiFallback: "⛪",
-    frase: "Un pueblo tranquilo, ideal para un domingo sin planes grandes.",
+    frase: "Un pueblo tranquilo, ideal para un domingo sin planes grandes — pero juntos todo el día.",
     direccionOMapa: "https://maps.google.com/?q=Lujan+Buenos+Aires",
-    requisitos: ["ganas de caminar"],
+    requisitos: [
+      "ganas de caminar",
+      "algo para picar en el camino",
+      "cámara de fotos",
+      "paciencia para las paradas a sacar fotos",
+    ],
   },
   {
     id: "laguna-de-pilar",
@@ -272,7 +283,8 @@ export const planes: Plan[] = [
     vegetarianoFriendly: true,
     foto: "/images/domo.jpg",
     emojiFallback: "⛺",
-    frase: "Una noche bajo las estrellas, sin apuro de volver.",
+    frase:
+      "Una noche bajo las estrellas, sin apuro de volver — solos vos, yo, y el cielo entero para nosotros.",
     direccionOMapa: "https://maps.google.com/?q=domos+glamping+cerca+de+Buenos+Aires",
     requisitos: ["ropa de abrigo", "reserva previa", "cargador de celu"],
     duracion: "finde",
@@ -341,9 +353,14 @@ export const planes: Plan[] = [
     vegetarianoFriendly: true,
     foto: "/images/escalada.jpg",
     emojiFallback: "🧗",
-    frase: "Subir juntos, aunque sea a una pared con colchones abajo.",
+    frase:
+      "Subir juntos, aunque sea a una pared con colchones abajo — prometo no reírme (tanto) si llegás más alto que yo.",
     direccionOMapa: "https://maps.google.com/?q=rocodromo+Buenos+Aires",
-    requisitos: ["ropa deportiva", "reserva de clase (si es la primera vez)"],
+    requisitos: [
+      "ropa deportiva",
+      "reserva de clase (si es la primera vez)",
+      "ganas de intentarlo aunque dé un poco de miedo",
+    ],
   },
   {
     id: "museo-malba",
@@ -354,9 +371,9 @@ export const planes: Plan[] = [
     vegetarianoFriendly: true,
     foto: "/images/museo.jpg",
     emojiFallback: "🖼️",
-    frase: "Caminar despacio mirando cuadros, agarrados de la mano.",
+    frase: "Caminar despacio mirando cuadros, agarrados de la mano, inventando historias sobre los que no entendemos.",
     direccionOMapa: "https://maps.google.com/?q=MALBA+Buenos+Aires",
-    requisitos: ["entradas (chequear día gratis)"],
+    requisitos: ["entradas (chequear día gratis)", "curiosidad", "paciencia para las salas que no nos gusten tanto"],
   },
   {
     id: "planetario-noche",
@@ -367,9 +384,10 @@ export const planes: Plan[] = [
     vegetarianoFriendly: true,
     foto: "/images/planetario.jpg",
     emojiFallback: "🔭",
-    frase: "Mirar las estrellas con vos, aunque sean de mentira.",
+    frase:
+      "Mirar las estrellas con vos, aunque sean de mentira — total, lo que importa es a quién tengo al lado.",
     direccionOMapa: "https://maps.google.com/?q=Planetario+Galileo+Galilei",
-    requisitos: ["chequear agenda de excursión nocturna", "abrigo"],
+    requisitos: ["chequear agenda de excursión nocturna", "abrigo", "ganas de inventar constelaciones"],
   },
   {
     id: "bar-de-vinos",
@@ -380,9 +398,9 @@ export const planes: Plan[] = [
     vegetarianoFriendly: true,
     foto: "/images/bar-vinos.jpg",
     emojiFallback: "🍷",
-    frase: "Una copa de vino, poca luz, y hablar de cualquier cosa.",
+    frase: "Una copa de vino, poca luz, y hablar de cualquier cosa hasta que cierren el lugar.",
     direccionOMapa: "https://maps.google.com/?q=vinoteca+bar+de+vinos+Buenos+Aires",
-    requisitos: ["reserva si es finde"],
+    requisitos: ["reserva si es finde", "ganas de una copa de vino", "hambre de charla"],
   },
   {
     id: "sala-de-escape",
@@ -393,8 +411,8 @@ export const planes: Plan[] = [
     vegetarianoFriendly: true,
     foto: "/images/sala-escape.jpg",
     emojiFallback: "🔐",
-    frase: "Encerrados una hora, obligados a trabajar en equipo (y a que gane el amor).",
+    frase: "Encerrados una hora, obligados a trabajar en equipo — y a que gane el amor, obviamente.",
     direccionOMapa: "https://maps.google.com/?q=sala+de+escape+Buenos+Aires",
-    requisitos: ["reserva previa", "grupo de 2 a 6 personas"],
+    requisitos: ["reserva previa", "grupo de 2 a 6 personas", "ganas de resolver acertijos juntos"],
   },
 ];

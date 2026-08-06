@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${quicksand.variable} ${poppins.variable} ${caveat.variable} font-sans min-h-screen bg-crema text-negro antialiased`}
+        className={`${quicksand.variable} ${poppins.variable} ${caveat.variable} font-sans min-h-dvh bg-crema text-negro antialiased`}
       >
         {children}
       </body>

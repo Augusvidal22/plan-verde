@@ -9,6 +9,7 @@ import FotoPlan from "./FotoPlan";
 interface CartasProps {
   planes: Plan[];
   onVerSorpresa: () => void;
+  onVolver: () => void;
 }
 
 type Fase = "barajando" | "eligiendo" | "revelado";
@@ -73,9 +74,9 @@ function lanzarConfetti() {
   }, 200);
 }
 
-export default function Cartas({ planes, onVerSorpresa }: CartasProps) {
+export default function Cartas({ planes, onVerSorpresa, onVolver }: CartasProps) {
   const [fase, setFase] = useState<Fase>("barajando");
-  const [mazo, setMazo] = useState<Plan[]>(() => mezclar(planes).slice(0, 4));
+  const [mazo, setMazo] = useState<Plan[]>(() => mezclar(planes).slice(0, 8));
   const [elegidaId, setElegidaId] = useState<string | null>(null);
 
   useEffect(() => {
@@ -101,7 +102,7 @@ export default function Cartas({ planes, onVerSorpresa }: CartasProps) {
   function handleTirarDeNuevo() {
     setElegidaId(null);
     setFase("barajando");
-    setMazo(mezclar(planes).slice(0, 4));
+    setMazo(mezclar(planes).slice(0, 8));
   }
 
   const cartasVisibles = fase === "eligiendo" || fase === "barajando"
@@ -109,27 +110,40 @@ export default function Cartas({ planes, onVerSorpresa }: CartasProps) {
     : mazo.filter((p) => p.id === elegidaId);
 
   return (
-    <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-crema px-4 py-10 md:px-8">
+    <div className="relative flex min-h-dvh flex-col items-center bg-crema px-4 py-10 md:px-8">
       {fase === "eligiendo" && <CorazonesFlotantes />}
 
       {fase !== "revelado" && (
-        <motion.div
+        <motion.button
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="relative z-10 mb-8 flex flex-col items-center gap-2 text-center"
+          whileTap={{ scale: 0.95 }}
+          onClick={onVolver}
+          className="fixed right-4 top-4 z-20 rounded-full border-2 border-negro bg-crema/90 px-4 py-2 font-sans text-sm font-semibold text-negro shadow-carta backdrop-blur transition-colors hover:bg-negro hover:text-crema md:right-6 md:top-6"
         >
-          <h2 className="font-poppins text-xl font-semibold text-negro md:text-2xl">
-            {fase === "barajando" ? "Barajando los planes... 🌿" : "Elegí una carta, sofff 💚"}
-          </h2>
-          {fase === "eligiendo" && (
-            <p className="font-manuscrita text-xl text-negro/60 md:text-2xl">
-              tocá la que más te guste 🖤
-            </p>
-          )}
-        </motion.div>
+          ← volver
+        </motion.button>
       )}
 
-      <div className="relative z-10 flex w-full flex-wrap items-center justify-center gap-5 md:gap-8">
+      <div className="my-auto flex w-full flex-col items-center">
+        {fase !== "revelado" && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="relative z-10 mb-8 flex flex-col items-center gap-2 text-center"
+          >
+            <h2 className="font-poppins text-xl font-semibold text-negro md:text-2xl">
+              {fase === "barajando" ? "Barajando los planes... 🌿" : "Elegí una carta, sofff 💚"}
+            </h2>
+            {fase === "eligiendo" && (
+              <p className="font-manuscrita text-xl text-negro/60 md:text-2xl">
+                tocá la que más te guste 🖤
+              </p>
+            )}
+          </motion.div>
+        )}
+
+        <div className="relative z-10 flex w-full flex-wrap items-center justify-center gap-5 md:gap-8">
         <AnimatePresence>
           {cartasVisibles.map((p) => {
             const esElegida = p.id === elegidaId;
@@ -281,6 +295,9 @@ export default function Cartas({ planes, onVerSorpresa }: CartasProps) {
           </motion.button>
         </motion.div>
       )}
+      </div>
     </div>
   );
 }
+
+

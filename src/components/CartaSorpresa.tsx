@@ -51,7 +51,7 @@ export default function CartaSorpresa({ onVolver }: CartaSorpresaProps) {
   );
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-crema to-verde-pastel-light px-6 py-12">
+    <div className="flex min-h-dvh flex-col items-center justify-center bg-gradient-to-b from-crema to-verde-pastel-light px-6 py-12">
       <motion.div
         initial={{ opacity: 0, scale: 0.9, rotate: -3 }}
         animate={{ opacity: 1, scale: 1, rotate: 0 }}

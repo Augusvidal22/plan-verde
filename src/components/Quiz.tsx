@@ -17,6 +17,14 @@ const frasesTiernas = [
   "Desde el 3 de julio no paro de pensar en vos",
   "Ojalá el plan tenga humus, pero con vos cualquiera está bien",
   "Un poquito de negro, un poquito de verde, un mucho de vos 🖤🌿",
+  "Dato random: los perritos felices menean la cola. Yo no tengo cola, pero la idea es esa 🐶",
+  "Si algún día tenemos un perro, ya sé que lo vas a malcriar más que yo",
+  "Estoy más nervioso eligiendo bien las opciones que vos eligiendo la respuesta",
+  "Sea cual sea el plan, ya estoy pensando en la próxima vez",
+  "Todavía nos estamos conociendo, pero ya sé que me gusta esto",
+  "Un perrito feliz corriendo en un parque es más o menos lo que siento eligiendo esto con vos 🐾",
+  "No hay presión, sofff. Peor es nada, y esto ya es bastante lindo",
+  "Prometo no hacer trampa con las cartas (esta vez)",
 ];
 
 type OpcionMomento = {
@@ -73,8 +81,8 @@ export default function Quiz({ onCompletar }: QuizProps) {
   const pregunta = paso === 0 ? preguntaMomento : preguntaAmbiente;
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-crema px-6 py-12 pb-32">
-      <div className="mb-8 flex gap-2">
+    <div className="flex min-h-dvh flex-col items-center bg-crema px-6 py-8">
+      <div className="mb-6 flex gap-2">
         {[0, 1].map((i) => (
           <span
             key={i}
@@ -92,7 +100,7 @@ export default function Quiz({ onCompletar }: QuizProps) {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -40 }}
           transition={{ duration: 0.35 }}
-          className="flex w-full max-w-lg flex-col items-center text-center"
+          className="flex w-full max-w-lg flex-1 flex-col items-center justify-center text-center"
         >
           <h2 className="mb-10 font-poppins text-2xl font-semibold text-negro md:text-3xl">
             {pregunta.texto}
@@ -141,7 +149,7 @@ export default function Quiz({ onCompletar }: QuizProps) {
         </motion.div>
       </AnimatePresence>
 
-      <div className="fixed inset-x-0 bottom-0 flex justify-center bg-gradient-to-t from-crema via-crema/95 to-transparent px-6 pb-6 pt-10">
+      <div className="flex w-full justify-center px-6 pb-2 pt-6">
         <AnimatePresence mode="wait">
           <motion.p
             key={fraseIndex}

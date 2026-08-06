@@ -8,7 +8,7 @@ interface BienvenidaProps {
 
 export default function Bienvenida({ onComenzar }: BienvenidaProps) {
   return (
-    <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-verde-pastel-light via-crema to-crema px-6 text-center">
+    <div className="relative flex min-h-dvh flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-verde-pastel-light via-crema to-crema px-6 text-center">
       {/* Blobs decorativos */}
       <motion.div
         className="pointer-events-none absolute -top-20 -left-16 h-64 w-64 rounded-full bg-verde-pastel/40 blur-3xl md:h-80 md:w-80"

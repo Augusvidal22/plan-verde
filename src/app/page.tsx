@@ -20,7 +20,8 @@ type Accion =
   | { type: "COMENZAR" }
   | { type: "COMPLETAR_QUIZ"; respuestas: RespuestasQuiz }
   | { type: "VER_SORPRESA" }
-  | { type: "VOLVER_A_CARTAS" };
+  | { type: "VOLVER_A_CARTAS" }
+  | { type: "VOLVER_AL_QUIZ" };
 
 const estadoInicial: EstadoApp = {
   pantalla: "bienvenida",
@@ -37,6 +38,8 @@ function reducer(estado: EstadoApp, accion: Accion): EstadoApp {
       return { ...estado, pantalla: "sorpresa" };
     case "VOLVER_A_CARTAS":
       return { ...estado, pantalla: "cartas" };
+    case "VOLVER_AL_QUIZ":
+      return { ...estado, pantalla: "quiz" };
     default:
       return estado;
   }
@@ -85,6 +88,7 @@ export default function Home() {
           <Cartas
             planes={planesFiltrados}
             onVerSorpresa={() => dispatch({ type: "VER_SORPRESA" })}
+            onVolver={() => dispatch({ type: "VOLVER_AL_QUIZ" })}
           />
         </motion.div>
       )}
